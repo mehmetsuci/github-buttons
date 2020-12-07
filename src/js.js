@@ -55,7 +55,8 @@
   var USER_REPO = user + '/' + repo;
 
   window.callback = function(obj) {
-    if (obj.data.message === 'Not Found') {
+    // If the repo isn't found or if we didn't receive any data return early
+    if (!obj || !obj.data || obj.data.message === 'Not Found') {
       return;
     }
 
