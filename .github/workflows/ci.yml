@@ -2,7 +2,6 @@ name: CI
 on: [push, pull_request]
 
 env:
-  CI: true
   FORCE_COLOR: 2
   NODE: 14.x
   RUBY: 2.7
